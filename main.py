@@ -24,6 +24,12 @@ parser = argparse.ArgumentParser(
            "仓库地址：https://github.com/find456789/ypip",
 )
 
+subparser_i  = parser.add_subparsers(help=argparse.SUPPRESS) # 用户可能把ypip当成pip用，会输入 install
+
+parser_install = subparser_i.add_parser("install")
+parser_install.add_argument("packageName")
+
+
 group = parser.add_mutually_exclusive_group()
 
 # 加载源
@@ -38,20 +44,24 @@ group.add_argument('-zi', metavar='[源地址]' , help="自定义源地址（如
 
 args = parser.parse_args()
 
-if args.zi:
-    # 我要自定义源地址
-    the_url = args.zi
-    print(f"你选择了 自定义源:   {the_url} ")
+if args.packageName:
+    # 有人 把 ypip 当做pip用，打算 ypip install xxx
+    print("发生错误：你不能把ypip 当做pip用，ypip只是用来修改源的，不能安装包")
 else:
-    my_chose_key = "-" + filter_my_chose(args)
-    my_chose_item = yuanList[my_chose_key]
-    the_url = my_chose_item.get('url')
-    print(f"你选择了:  {my_chose_item.get('name')} {the_url} ")
+    if args.zi:
+        # 我要自定义源地址
+        the_url = args.zi
+        print(f"你选择了 自定义源:   {the_url} ")
+    else:
+        my_chose_key = "-" + filter_my_chose(args)
+        my_chose_item = yuanList[my_chose_key]
+        the_url = my_chose_item.get('url')
+        print(f"你选择了:  {my_chose_item.get('name')} {the_url} ")
 
-cmd_pip_setY: list = cmd_pip + ["config", "set", "global.index-url", the_url]
+    cmd_pip_setY: list = cmd_pip + ["config", "set", "global.index-url", the_url]
 
-set_y = subprocess.call(cmd_pip_setY)
+    set_y = subprocess.call(cmd_pip_setY)
 
-get_y = subprocess.check_output(cmd_pip_getY)
+    get_y = subprocess.check_output(cmd_pip_getY)
 
-print(f"你电脑中 global.index-url 最新值为:{get_y.decode('utf8', 'ignore')}")
+    print(f"你电脑中 global.index-url 最新值为:{get_y.decode('utf8', 'ignore')}")
