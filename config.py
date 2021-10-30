@@ -1,3 +1,7 @@
+cmd_pip: list = ["python", "-m", "pip"]
+cmd_pip_getY: list = cmd_pip + ["config", "get", "global.index-url"]
+
+
 yuanList = {
     "-pypi": {
         "cmd": "-pypi",
