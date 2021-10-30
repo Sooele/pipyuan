@@ -1,6 +1,10 @@
 import gettext
 
 # 默认的 argparse 显示的是英文的， 这里覆盖为中文
+import subprocess
+
+from config import cmd_pip_getY, cmd_pip
+
 
 def my_i18n(Text: str):
     Text = Text.replace("usage", "用法")
@@ -25,3 +29,13 @@ def filter_my_chose(args):
     args_dict = vars(args)
     a1 = dict(filter(lambda e: e[1] is True, args_dict.items())).keys()
     return list(a1)[0]
+
+
+def setYuan(the_url):
+    cmd_pip_setY: list = cmd_pip + ["config", "set", "global.index-url", the_url]
+
+    set_y = subprocess.call(cmd_pip_setY)
+
+    get_y = subprocess.check_output(cmd_pip_getY)
+
+    print(f"你电脑中 global.index-url 最新值为:{get_y.decode('utf8', 'ignore')}")

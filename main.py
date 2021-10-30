@@ -1,7 +1,7 @@
 import sys
 import textwrap
 import subprocess
-from utils import gettext, filter_my_chose  # gettext 必须在 import argparse 前面，否则翻译不生效
+from utils import gettext, filter_my_chose, setYuan  # gettext 必须在 import argparse 前面，否则翻译不生效
 import argparse
 
 from config import yuanList, cmd_pip, cmd_pip_getY
@@ -16,6 +16,8 @@ parser = argparse.ArgumentParser(
         例如： 
             pipyuan -a 设置pip源 为阿里云的
             pipyuan -q 设置pip源 为清华大学的
+        参数列表
+            
 
         '''),
     # description="description啊啊啊", # 用法和参数说明之间
@@ -27,41 +29,32 @@ parser = argparse.ArgumentParser(
 # 用户可能把pipyuan当成pip用，会输入 install， 用来容错
 parser.add_argument("action", nargs='*', help=argparse.SUPPRESS)  # 隐藏
 
-group = parser.add_mutually_exclusive_group()
-
-# 加载源
-for item in yuanList:
-    group.add_argument(
-        yuanList[item].get("cmd"),
-        action='store_true',  # 默认True，支持后面不添加参数
-        help=f"{yuanList[item].get('name')} {yuanList[item].get('url')}")
-
-# 自定义源地址
-group.add_argument('-zi', metavar='[源地址]', help="自定义源地址（如：pipyuan -zi https://xx.com/simple ）")
-
 args = parser.parse_args()
 
-if args.action:
-    if "install" in args.action:
-        # 有人 把 pipyuan 当做pip用，打算 pipyuan install xxx
-        print("发生错误：你不能把pipyuan 当做pip用，pipyuan只是用来修改源的，不能安装包")
-    else:
-        print("指令错误！！ 正确格式为： pipyuan -a")
-else:
-    if args.zi:
-        # 我要自定义源地址
-        the_url = args.zi
+
+if "install" == args.action[0]:
+    # 有人 把 pipyuan 当做pip用，打算 pipyuan install xxx
+    print("发生错误：你不能把pipyuan 当做pip用，pipyuan只是用来修改源的，不能安装包")
+elif "zi" == args.action[0]:
+    if len(args.action)==2:
+        the_url = args.action[1]
         print(f"你选择了 自定义源:   {the_url} ")
+        setYuan(the_url)
     else:
-        my_chose_key = "-" + filter_my_chose(args)
-        my_chose_item = yuanList[my_chose_key]
-        the_url = my_chose_item.get('url')
-        print(f"你选择了:  {my_chose_item.get('name')} {the_url} ")
+        print("参数错误！参数少了，或者多了，请重新检查")
 
-    cmd_pip_setY: list = cmd_pip + ["config", "set", "global.index-url", the_url]
 
-    set_y = subprocess.call(cmd_pip_setY)
+else:
+    if not len(args.action) == 1:
+        print("指令错误！！ 正确格式为： pipyuan -a")
+    else:
+        my_chose_key = yuanList.get(args.action[0])
 
-    get_y = subprocess.check_output(cmd_pip_getY)
+        try:
+            the_url = my_chose_key.get("url")
+            print(f"你选择了:  {my_chose_key.get('name')} {the_url} ")
+            setYuan(the_url)
+        except:
+            print("未知指令！ 请检查后再输入")
 
-    print(f"你电脑中 global.index-url 最新值为:{get_y.decode('utf8', 'ignore')}")
+
