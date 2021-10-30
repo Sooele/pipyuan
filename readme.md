@@ -1,4 +1,8 @@
 
+![PyPI](https://img.shields.io/pypi/v/pipyuan)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pipyuan)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/pipyuan)
+
 
 方便好记， 单词 `pipyuan` 由 `pip` 和 `yuan` 组成； 助记： pip源
 
