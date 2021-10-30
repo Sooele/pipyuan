@@ -70,4 +70,5 @@ def main():
                 print("未知指令！ 请检查后再输入")
 
 
-main()
+if __name__ == "__main__":
+    main()
