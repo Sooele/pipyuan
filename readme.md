@@ -17,6 +17,19 @@ https://github.com/find456789/pipyuan
 
 `pipyuan` 内置了国内常用的 pip 源， 你可以快速设置想要的源
 
+# 使用
+
+假设你在一个新电脑上。刚安装了python，那么接下来你只需要：
+
+1. 安装 pipyuan：
+   - `python -m pip install pipyuan` 或者 `pip install pipyuan `
+2. 使用 pipyuan 修改本地的源
+   - `pipyuan a`  修改为阿里云的源
+   
+3. 愉快的使用 pip 安装其他包（这时候你的源已经被修改好了）
+
+
+
 # 支持的源
  
 | 源地址                                                     | 谁家的    | 指令               | 助记                   |
@@ -38,18 +51,6 @@ https://github.com/find456789/pipyuan
 
 - 方便好记， `pipyuan` 由 `pip` 和 `yuan` 组成；助记： pip源
 - 很轻巧，不依赖其他第三方包，只依赖Python自带的包
-
-
-# 平时怎么用
-
-假设你在一个新电脑上。刚安装了python，那么接下来你只需要：
-
-1. 安装 pipyuan：
-   - `python -m pip install pipyuan` 或者 `pip install pipyuan `
-2. 使用 pipyuan 修改本地的源
-   - `pipyuan a`  修改为阿里云的源
-   
-3. 愉快的使用 pip 安装其他包（这时候你的源已经被修改好了）
 
 
 # 欢迎提供建议
