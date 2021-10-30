@@ -21,7 +21,7 @@ parser = argparse.ArgumentParser(
     # description="description啊啊啊", # 用法和参数说明之间
     epilog="如何记忆："
            "参数中的字母都是对应的中文名的第一个拼音,如-a中的a是阿里云拼音(aliyun)的第一个字母,其他类似； "
-           "仓库地址：github.cn/find456789/ypip",
+           "仓库地址：https://github.com/find456789/ypip",
 )
 
 group = parser.add_mutually_exclusive_group()
@@ -34,7 +34,7 @@ for item in yuanList:
         help=f"{yuanList[item].get('name')} {yuanList[item].get('url')}")
 
 # 自定义源地址
-group.add_argument('-zi', help="自定义源地址（如：ypip -zi https://xx.com/simple ）")
+group.add_argument('-zi', metavar='[源地址]' , help="自定义源地址（如：ypip -zi https://xx.com/simple ）")
 
 args = parser.parse_args()
 

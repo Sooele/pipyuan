@@ -10,6 +10,7 @@ def my_i18n(Text: str):
     Text = Text.replace("optional arguments", "参数说明")
     Text = Text.replace("unrecognized arguments", "无法识别的参数")
     Text = Text.replace("argument", "参数")
+    Text = Text.replace("expected one", "需要一个")
     Text = Text.replace("not allowed with", "(同时只能设置一个源)，后面不允许跟")
     Text = Text.replace("the following arguments are required:",
                         "以下参数是必需的")
