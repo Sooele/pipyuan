@@ -7,7 +7,7 @@ def my_i18n(Text: str):
     Text = Text.replace("show this help message and exit","查看帮助")
     Text = Text.replace("error:", "错误:")
     # Text = Text.replace("positional arguments", "参数说明")
-    Text = Text.replace("optional arguments", "参数说明")
+    Text = Text.replace("optional arguments", "其他参数")
     Text = Text.replace("unrecognized arguments", "无法识别的参数")
     Text = Text.replace("argument", "参数")
     Text = Text.replace("expected one", "需要一个")
