@@ -46,7 +46,7 @@ if args.action:
         # 有人 把 pipyuan 当做pip用，打算 pipyuan install xxx
         print("发生错误：你不能把pipyuan 当做pip用，pipyuan只是用来修改源的，不能安装包")
     else:
-        print("指令错误！！")
+        print("指令错误！！ 正确格式为： pipyuan -a")
 else:
     if args.zi:
         # 我要自定义源地址
