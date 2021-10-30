@@ -24,13 +24,6 @@ gettext.gettext = my_i18n
 
 
 
-def filter_my_chose(args):
-    """我选了谁"""
-    args_dict = vars(args)
-    a1 = dict(filter(lambda e: e[1] is True, args_dict.items())).keys()
-    return list(a1)[0]
-
-
 def setYuan(the_url):
     cmd_pip_setY: list = cmd_pip + ["config", "set", "global.index-url", the_url]
 

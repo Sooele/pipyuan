@@ -1,10 +1,10 @@
 import sys
 import textwrap
-import subprocess
-from utils import gettext, filter_my_chose, setYuan  # gettext 必须在 import argparse 前面，否则翻译不生效
+
+from utils import gettext, setYuan  # gettext 必须在 import argparse 前面，否则翻译不生效
 import argparse
 
-from config import yuanList, cmd_pip, cmd_pip_getY
+from config import yuanList
 
 if len(sys.argv) == 1:
     sys.argv.append('--help')
@@ -14,15 +14,25 @@ parser = argparse.ArgumentParser(
         pipyuan [参数] 
         --------------------------------
         例如： 
-            pipyuan -a 设置pip源 为阿里云的
-            pipyuan -q 设置pip源 为清华大学的
+            pipyuan a 设置pip源 为阿里云的
+            pipyuan q 设置pip源 为清华大学的
         参数列表
+            pipyuan gf	官方	https://pypi.org/simple/
+            pipyuan a	阿里云	https://mirrors.aliyun.com/pypi/simple/
+            pipyuan q	清华	https://pypi.tuna.tsinghua.edu.cn/simple
+            pipyuan t	腾讯	https://mirrors.cloud.tencent.com/pypi/simple
+            pipyuan h	华为	https://mirrors.huaweicloud.com/repository/pypi/simple/
+            pipyuan d	豆瓣	https://pypi.douban.com/simple/
+            pipyuan tn	腾讯内网	https://mirrors.tencentyun.com/pypi/simple
+            pipyuan an	阿里内网	https://mirrors.aliyuncs.com/pypi/simple/
+            pipyuan hn	华为内网	https://mirrors.myhuaweicloud.com/pypi/web/simple
+            pipyuan zi [源地址]	自定义	（如：pipyuan zi https://xx.com/simple ）
             
 
         '''),
     # description="description啊啊啊", # 用法和参数说明之间
     epilog="如何记忆："
-           "参数中的字母都是对应的中文名的第一个拼音,如-a中的a是阿里云拼音(aliyun)的第一个字母,其他类似； "
+           "参数中的字母都是对应的中文名的第一个拼音,如：a是阿里云拼音(aliyun)的第一个字母,其他类似； "
            "仓库地址：https://github.com/find456789/pipyuan",
 )
 
