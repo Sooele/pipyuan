@@ -11,20 +11,20 @@ if len(sys.argv) == 1:
 
 parser = argparse.ArgumentParser(
     usage=textwrap.dedent('''\
-        ypip [参数] 
+        pipyuan [参数] 
         --------------------------------
         例如： 
-            ypip -a 设置pip源 为阿里云的
-            ypip -q 设置pip源 为清华大学的
+            pipyuan -a 设置pip源 为阿里云的
+            pipyuan -q 设置pip源 为清华大学的
            
         '''),
     # description="description啊啊啊", # 用法和参数说明之间
     epilog="如何记忆："
            "参数中的字母都是对应的中文名的第一个拼音,如-a中的a是阿里云拼音(aliyun)的第一个字母,其他类似； "
-           "仓库地址：https://github.com/find456789/ypip",
+           "仓库地址：https://github.com/find456789/pipyuan",
 )
 
-subparser_i  = parser.add_subparsers(help=argparse.SUPPRESS) # 用户可能把ypip当成pip用，会输入 install
+subparser_i  = parser.add_subparsers(help=argparse.SUPPRESS) # 用户可能把pipyuan当成pip用，会输入 install
 
 parser_install = subparser_i.add_parser("install")
 parser_install.add_argument("packageName")
@@ -40,13 +40,13 @@ for item in yuanList:
         help=f"{yuanList[item].get('name')} {yuanList[item].get('url')}")
 
 # 自定义源地址
-group.add_argument('-zi', metavar='[源地址]' , help="自定义源地址（如：ypip -zi https://xx.com/simple ）")
+group.add_argument('-zi', metavar='[源地址]' , help="自定义源地址（如：pipyuan -zi https://xx.com/simple ）")
 
 args = parser.parse_args()
 
 if args.packageName:
-    # 有人 把 ypip 当做pip用，打算 ypip install xxx
-    print("发生错误：你不能把ypip 当做pip用，ypip只是用来修改源的，不能安装包")
+    # 有人 把 pipyuan 当做pip用，打算 pipyuan install xxx
+    print("发生错误：你不能把pipyuan 当做pip用，pipyuan只是用来修改源的，不能安装包")
 else:
     if args.zi:
         # 我要自定义源地址
