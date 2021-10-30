@@ -24,10 +24,7 @@ parser = argparse.ArgumentParser(
            "仓库地址：https://github.com/find456789/pipyuan",
 )
 
-# subparser_i  = parser.add_subparsers(help=argparse.SUPPRESS) # 用户可能把pipyuan当成pip用，会输入 install
-#
-# parser_install = subparser_i.add_parser("install")
-# parser_install.add_argument("packageName")
+# 用户可能把pipyuan当成pip用，会输入 install， 用来容错
 parser.add_argument("action", nargs='*', help=argparse.SUPPRESS)  # 隐藏
 
 group = parser.add_mutually_exclusive_group()
