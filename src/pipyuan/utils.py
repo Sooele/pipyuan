@@ -3,7 +3,7 @@ import gettext
 # 默认的 argparse 显示的是英文的， 这里覆盖为中文
 import subprocess
 
-from config import cmd_pip_getY, cmd_pip
+from pipyuan.config import cmd_pip_getY, cmd_pip
 
 
 def my_i18n(Text: str):

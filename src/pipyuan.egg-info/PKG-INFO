@@ -1,9 +1,23 @@
+Metadata-Version: 2.1
+Name: pipyuan
+Version: 0.0.2
+Summary: pipyuan 内置了国内常用的 pip 源， 你可以快速设置想要的源
+Home-page: https://github.com/find456789/pipyuan
+Author: find456789
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/find456789/pipyuan/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 
 
 方便好记， 单词 `pipyuan` 由 `pip` 和 `yuan` 组成； 助记： pip源
 
-# 项目地址：
-https://github.com/find456789/pipyuan
 
 # 用途
 
@@ -56,5 +70,7 @@ https://github.com/find456789/pipyuan
 [comment]: <> (# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple)
 
 [comment]: <> (# pip config get global.index-url)
+
+
 
 

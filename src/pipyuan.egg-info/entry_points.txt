@@ -1,0 +1,3 @@
+[console_scripts]
+pipyuan = pipyuan.main:main
+
