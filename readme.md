@@ -58,6 +58,8 @@ https://github.com/find456789/pipyuan
 有啥建议，请给我提出，谢谢
 
 
+[comment]: <> (打包 https://packaging.python.org/tutorials/packaging-projects/)
+
 [comment]: <> (# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple)
 
 [comment]: <> (# pip config get global.index-url)

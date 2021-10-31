@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pipyuan
-Version: 0.0.2
+Version: 0.0.3
 Summary: pipyuan 内置了国内常用的 pip 源， 你可以快速设置想要的源
 Home-page: https://github.com/find456789/pipyuan
 Author: find456789
@@ -15,9 +15,15 @@ Description-Content-Type: text/markdown
 License-File: LICENSE
 
 
+![PyPI](https://img.shields.io/pypi/v/pipyuan)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pipyuan)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/pipyuan)
+
 
 方便好记， 单词 `pipyuan` 由 `pip` 和 `yuan` 组成； 助记： pip源
 
+# 项目地址：
+https://github.com/find456789/pipyuan
 
 # 用途
 
@@ -26,6 +32,19 @@ License-File: LICENSE
 当我们想给 pip 设置一个国内源的时候，还要很麻烦的去找源地址
 
 `pipyuan` 内置了国内常用的 pip 源， 你可以快速设置想要的源
+
+# 使用
+
+假设你在一个新电脑上。刚安装了python，那么接下来你只需要：
+
+1. 安装 pipyuan：
+   - `python -m pip install pipyuan` 或者 `pip install pipyuan `
+2. 使用 pipyuan 修改本地的源
+   - `pipyuan a`  修改为阿里云的源
+   
+3. 愉快的使用 pip 安装其他包（这时候你的源已经被修改好了）
+
+
 
 # 支持的源
  
@@ -50,22 +69,12 @@ License-File: LICENSE
 - 很轻巧，不依赖其他第三方包，只依赖Python自带的包
 
 
-# 平时怎么用
-
-假设你在一个新电脑上。刚安装了python，那么接下来你只需要：
-
-1. 安装 pipyuan：
-   - `python -m pip install pipyuan` 或者 `pip install pipyuan `
-2. 使用 pipyuan 修改本地的源
-   - `pipyuan a`  修改为阿里云的源
-   
-3. 愉快的使用 pip 安装其他包（这时候你的源已经被修改好了）
-
-
 # 欢迎提供建议
 
 有啥建议，请给我提出，谢谢
 
+
+[comment]: <> (打包 https://packaging.python.org/tutorials/packaging-projects/)
 
 [comment]: <> (# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple)
 
