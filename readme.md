@@ -65,3 +65,13 @@ https://github.com/find456789/pipyuan
 [comment]: <> (# pip config get global.index-url)
 
 
+[comment]: <> (# 待添加的功能 )
+
+[comment]: <> ([ ] 目前是直接替换为某个源，未来支持 在原基础上 新增源（有时候想同时用多个源）)
+
+[comment]: <> (   pipyuan jia a, 在原基础上，增加 阿里云)
+
+[comment]: <> (   pipyuan jiazi 在源基础上，增加 自定义的源)
+
+[comment]: <> (   pipyuan a 把现有的所有的，替换为 阿里云的)
+
