@@ -47,7 +47,28 @@ https://github.com/find456789/pipyuan
 
 
 
-# pipyuan轻巧
+# `pipyuan` 后面的字母参数是什么意思？
+
+答：是对应公司的拼音的首字母
+
+比如：`pipyuan a`
+这里面的 `a` ， 就是 **a**liyun(阿里云的拼音) ->  拼音的第一个字母就是a
+
+再比如：`pipyuan q`
+这里面的 `q` ， 就是 **q**inghuadaxue(清华大学的拼音) -> 拼音的第一个字母就是q
+
+----
+
+再举例：
+
+我想改成 `豆瓣` 的源， 拼音 `douban` 的第一个字母是 `d `， 那我就执行 `pipyuan d`
+
+我想改成 `腾讯` 的源， 拼音 `tengxun` 的第一个字母是 `t `， 那我就执行 `pipyuan t`
+
+
+
+
+# `pipyuan` 很轻巧
 
 - 方便好记， `pipyuan` 由 `pip` 和 `yuan` 组成；助记： pip源
 - 很轻巧，不依赖其他第三方包，只依赖Python自带的包
@@ -61,9 +82,9 @@ https://github.com/find456789/pipyuan
 [comment]: <> (打包 https://packaging.python.org/tutorials/packaging-projects/)
 
 [comment]: <> (# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple)
+[comment]: <> (# python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple)
 
 [comment]: <> (# pip config get global.index-url)
-
 
 [comment]: <> (# 待添加的功能 )
 
