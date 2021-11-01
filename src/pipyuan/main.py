@@ -58,7 +58,7 @@ def main():
 
     else:
         if not len(args.action) == 1:
-            print("指令错误！！ 正确格式为： pipyuan -a")
+            print("指令错误！！ 正确格式为： pipyuan a")
         else:
             my_chose_key = yuanList.get(args.action[0])
 
