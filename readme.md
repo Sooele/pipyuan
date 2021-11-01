@@ -34,16 +34,16 @@ https://github.com/find456789/pipyuan
  
 | 源地址                                                     | 谁家的    | 指令               | 助记                   |
 |---------------------------------------------------------|--------|------------------|----------------------|
-| https://pypi.org/simple/                                | 官方     | `pipyuan gf`     | 官方 拼音(GuanFang) 首字母  |
-| https://mirrors.aliyun.com/pypi/simple/                 | 阿里云    | `pipyuan a`      | aliyun的第一个字母a        |
-| https://pypi.tuna.tsinghua.edu.cn/simple                | 清华     | `pipyuan q`      | qinghua的第一个字母q       |
-| https://mirrors.cloud.tencent.com/pypi/simple           | 腾讯     | `pipyuan t`      | tengxun的第一个字母t       |
-| https://mirrors.huaweicloud.com/repository/pypi/simple/ | 华为     | `pipyuan h`      | huawei第一个字母h         |
-| https://pypi.douban.com/simple/                         | 豆瓣     | `pipyuan d`      | douban的第一个字母d        |
-| https://mirrors.tencentyun.com/pypi/simple              | 腾讯内网   | `pipyuan tn`     | 腾(t)讯内(n)网 拼音 首字母    |
-| https://mirrors.aliyuncs.com/pypi/simple/               | 阿里内网   | `pipyuan an`     | 阿(a)里内(n)网    拼音 首字母 |
-| https://mirrors.myhuaweicloud.com/pypi/web/simple       | 华为内网   | `pipyuan hn`     | 华(h)为内(n)网   拼音 首字母  |
-| https://xx.cn/simple                    | 自定义源地址 | `pipyuan zi url` | 自己 > 自 > zi          |
+| https://pypi.org/simple/                                | 官方     | `pipyuan gf`     | `gf`是guanfang的首字母（官方）  |
+| https://mirrors.aliyun.com/pypi/simple/                 | 阿里云    | `pipyuan a`      | `a`是aliyun的首字母        |
+| https://pypi.tuna.tsinghua.edu.cn/simple                | 清华     | `pipyuan q`      | `q`是qinghua的首字母      |
+| https://mirrors.cloud.tencent.com/pypi/simple           | 腾讯     | `pipyuan t`      | `t`是tengxun的首字母       |
+| https://mirrors.huaweicloud.com/repository/pypi/simple/ | 华为     | `pipyuan h`      | `h`是huawei的首字母        |
+| https://pypi.douban.com/simple/                         | 豆瓣     | `pipyuan d`      | `d`是douban的首字母        |
+| https://mirrors.tencentyun.com/pypi/simple              | 腾讯内网   | `pipyuan tn`     | `t`是 tengxun 首字母，`n`表示内网   |
+| https://mirrors.aliyuncs.com/pypi/simple/               | 阿里内网   | `pipyuan an`     | `a`是 ali 首字母，`n`表示内网   |
+| https://mirrors.myhuaweicloud.com/pypi/web/simple       | 华为内网   | `pipyuan hn`     | `h`是 huawei 首字母，`n`表示内网    |
+| https://xx.cn/simple                    | 自定义源地址 | `pipyuan zi url` | `zi` 是 自定义的第一个汉字拼音，不用z是防止未来的冲突        |
 
 
 
