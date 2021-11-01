@@ -32,18 +32,77 @@ https://github.com/find456789/pipyuan
 
 # 支持的源
 
-| 指令<div style="width:100px">                 | 改成谁家的      | 助记(拼音)                             | 源地址                                                       | 
-|--------------------|----------|--------------------------------|------------------------| 
- | `pipyuan gf`       | 官方       | `gf`是guanfang的首字母          | https://pypi.org/simple/                                  | 
-| `pipyuan a`        | 阿里云      | `a`是aliyun的首字母                 | https://mirrors.aliyun.com/pypi/simple/                   | 
-| `pipyuan q`        | 清华       | `q`是qinghua的首字母                | https://pypi.tuna.tsinghua.edu.cn/simple                  | 
-| `pipyuan t`        | 腾讯       | `t`是tengxun的首字母                | https://mirrors.cloud.tencent.com/pypi/simple             | 
-| `pipyuan h`        | 华为       | `h`是huawei的首字母                 | https://mirrors.huaweicloud.com/repository/pypi/simple/   | 
-| `pipyuan d`        | 豆瓣       | `d`是douban的首字母                 | https://pypi.douban.com/simple/                           | 
-| `pipyuan tn`       | 腾讯内网     | `t`是 tengxun 首字母，`n`表示内网       | https://mirrors.tencentyun.com/pypi/simple                | 
-| `pipyuan an`       | 阿里内网     | `a`是 ali 首字母，`n`表示内网           | https://mirrors.aliyuncs.com/pypi/simple/                 | 
-| `pipyuan hn`       | 华为内网     | `h`是 huawei 首字母，`n`表示内网        | https://mirrors.myhuaweicloud.com/pypi/web/simple         | 
-| `pipyuan zi url`   | 自定义源地址   | `zi` 是 自定义的第一个汉字拼音，不用z是防止未来的冲突 | https://你自己的网址                                      | 
+[comment]: <> (用table是因为网址占用太多空间，指令被迫换行了)
+<table>
+    <tr>
+        <td>指令</td>
+        <td>改成谁家的</td>
+        <td>助记(拼音)</td>
+        <td>源地址</td>
+    </tr>
+    <tr>
+        <td >  <code>pipyuan gf</code> </td>
+        <td>官方</td>
+        <td> <code>gf </code> 是guanfang的首字母</td>
+        <td>https://pypi.org/simple/</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan a </code> </td>
+        <td>阿里云</td>
+        <td> <code>a </code> 是aliyun的首字母</td>
+        <td>https://mirrors.aliyun.com/pypi/simple/</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan q </code> </td>
+        <td>清华</td>
+        <td> <code>q </code> 是qinghua的首字母</td>
+        <td>https://pypi.tuna.tsinghua.edu.cn/simple</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan t </code> </td>
+        <td>腾讯</td>
+        <td> <code>t </code> 是tengxun的首字母</td>
+        <td>https://mirrors.cloud.tencent.com/pypi/simple</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan h </code> </td>
+        <td>华为</td>
+        <td> <code>h </code> 是huawei的首字母</td>
+        <td>https://mirrors.huaweicloud.com/repository/pypi/simple/</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan d </code> </td>
+        <td>豆瓣</td>
+        <td> <code>d </code> 是douban的首字母</td>
+        <td>https://pypi.douban.com/simple/</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan tn </code> </td>
+        <td  nowrap="nowrap">腾讯内网</td>
+        <td  nowrap="nowrap"> <code>t </code> 是 tengxun 首字母，`n`表示内网</td>
+        <td>https://mirrors.tencentyun.com/pypi/simple</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan an </code> </td>
+        <td>阿里内网</td>
+        <td> <code>a </code> 是 ali 首字母，`n`表示内网</td>
+        <td>https://mirrors.aliyuncs.com/pypi/simple/</td>
+    </tr>
+    <tr>
+        <td> <code>pipyuan hn </code> </td>
+        <td>华为内网</td>
+        <td> <code>h </code> 是 huawei 首字母，`n`表示内网</td>
+        <td>https://mirrors.myhuaweicloud.com/pypi/web/simple</td>
+    </tr>
+    <tr>
+        <td   nowrap="nowrap"> <code>  pipyuan zi url </code> </td>
+        <td>自定义</td>
+        <td> <code>zi</code> 是 自定义的第一个汉字拼音，不用z是防止未来的冲突</td>
+        <td>https://你自己的网址</td>
+    </tr>
+</table>
+
+
 
 
 # `pipyuan` 后面的字母参数是什么意思？
