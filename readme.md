@@ -73,6 +73,14 @@ https://github.com/find456789/pipyuan
 - 方便好记， `pipyuan` 由 `pip` 和 `yuan` 组成；助记： pip源
 - 很轻巧，不依赖其他第三方包，只依赖Python自带的包
 
+# `pipyuan` 内部的原理是什么？
+
+内部调用了 `python -m pip config set global.index-url [源地址]` 来修改源
+
+所以，需要确保你电脑里的 `python` 指向了正确的位置
+
+
+
 
 # 欢迎提供建议
 
