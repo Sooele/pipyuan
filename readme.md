@@ -31,10 +31,10 @@ https://github.com/find456789/pipyuan
 
 
 # 支持的源
- 
-| 指令                 | 改成谁家的      | 助记                             | 源地址                                                       | 
-|--------------------|----------|--------------------------------|-----------------------------------------------------------| 
- | `pipyuan gf`       | 官方       | `gf`是guanfang的首字母（官方）          | https://pypi.org/simple/                                  | 
+
+| 指令<div style="width:100px">                 | 改成谁家的      | 助记(拼音)                             | 源地址                                                       | 
+|--------------------|----------|--------------------------------|------------------------| 
+ | `pipyuan gf`       | 官方       | `gf`是guanfang的首字母          | https://pypi.org/simple/                                  | 
 | `pipyuan a`        | 阿里云      | `a`是aliyun的首字母                 | https://mirrors.aliyun.com/pypi/simple/                   | 
 | `pipyuan q`        | 清华       | `q`是qinghua的首字母                | https://pypi.tuna.tsinghua.edu.cn/simple                  | 
 | `pipyuan t`        | 腾讯       | `t`是tengxun的首字母                | https://mirrors.cloud.tencent.com/pypi/simple             | 
